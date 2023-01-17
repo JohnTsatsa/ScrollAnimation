@@ -1,0 +1,46 @@
+/*------   google "font" choose your preference and import  ------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap'); 
+
+
+* {
+  box-sizing: border-box;
+  }
+
+
+body{
+	font-family:'Roboto',sens-serif;
+	margin: 0;
+	display:flex;
+	flex-direction:column;
+	align-items:center; /* align horizontaly */
+	justify-content:center; /* align vertical */
+	overflow-X:hidden; /*disable horizontal scroll bar*/
+}
+
+
+.box{ 
+	background:blue;
+    /* sizing of the boxes */
+	padding:20px;
+	margin:15px;
+	width:30%;
+
+	text-align:center;  /* center text of the box */
+	border-radius:10px;
+	transform:translateX(300%);  /* move the boxes 300% to the right */
+	transition:transform 1s ease-out;
+}
+/* the box 2,4,6,8,10 etc move them 300% to the left */
+.box:nth-of-type(even){
+	transform:translateX(-300%);
+}
+
+/* when the class of the box changes to "box show", put them to center */
+.box.show{
+	transform:translateX(0);
+}
+
+h2{
+	font-size:30px;
+	color:white;		
+}
